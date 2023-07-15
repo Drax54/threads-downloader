@@ -8,12 +8,15 @@ import json
 import re
 import urllib.request
 from selenium import webdriver
+import chromedriver_autoinstaller
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from flask import Flask, render_template, request, send_file
 import os
+
+chromedriver_autoinstaller.install()
 
 app = Flask(__name__)
 
